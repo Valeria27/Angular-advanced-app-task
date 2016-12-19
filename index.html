@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app = "app">
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<title></title>
+</head>
+<body>
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-controller = "showAccountsList as vm">
+  <div class="panel panel-default" ng-repeat = "user in vm.list.users">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+        	<img src= {{user.avatar}} > ID: {{user.id}} <br>
+        	Login: {{user.login}} <br>
+        	Name: {{user.name}} <br>
+        	Email:{{user.email}}
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+      		{{5+5}}
+      </div>
+    </div>
+  </div>
+
+<script type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+<script src="frontend/module.js"></script>
+<script src="frontend/show-accounts-list.controller.js"></script>
+
+</body>
+</html>
